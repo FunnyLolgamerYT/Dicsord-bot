@@ -17,20 +17,6 @@ client.on("ready", (c) => {
   console.log(`${c.user.tag} is now online`);
 });
 
-client.on("messageCreate", (msg) => {
-  console.log(msg.content);
-  if (msg.author.bot) {
-    return;
-  }
-
-  if (msg.author.id == 296277940877000705) {
-    console.log("Welcome EssentialBee");
-    msg.reply("Hello nerd");
-  } else {
-    msg.reply("Hello other nerd");
-  }
-});
-
 client.on("interactionCreate", (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
